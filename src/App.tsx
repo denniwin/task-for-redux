@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import Footer from "./layout/components/Footer";
 import Header from "./layout/components/Header";
 import PostsList from "./components/pages/post-list/PostsList";
@@ -8,7 +8,6 @@ import About from "./components/pages/About";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import AboutUser from "./components/pages/AboutUser";
-
 
 function App() {
   return (

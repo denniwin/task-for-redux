@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@common/*": ["common/*"],
+      // "@config/*": ["app/_config/*"],
+      // "@environment/*": ["environments/*"],
+      // "@shared/*": ["app/_shared/*"],
+      // "@helpers/*": ["helpers/*"]
+  },
     "target": "es5",
     "lib": [
       "dom",
@@ -24,3 +32,4 @@
     "src"
   ]
 }
+

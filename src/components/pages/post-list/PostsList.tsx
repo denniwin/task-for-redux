@@ -1,18 +1,15 @@
-
 import { useEffect, useState } from "react";
-import { GetPosts } from "../../../api/posts.api";
-import { Posts } from "../../../models/posts";
+import {TestApi} from "../../../common/index";
+import {Posts} from "@common/index";
 import PostItem from "../post-item/PostItem";
 import "./postslist.css";
 
-
 const PostsList = () => {
-
   const [ms, setMs] = useState<Posts[]>([]);
 
   useEffect(() => {
-    GetPosts()
-      .then(el => {
+    TestApi.GetPosts()
+      .then((el) => {
         setMs(el);
       })
       .catch((err) => {
@@ -50,13 +47,12 @@ const PostsList = () => {
         </div>
         <div className="panel">
           <div className="panel-body">
-            {ms && ms.map(el => <PostItem post={ el } key={el.id} />)}
+            {ms && ms.map((el) => <PostItem post={el} key={el.id} />)}
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 
 export default PostsList;
