@@ -1,18 +1,20 @@
 import {useEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faThumbsDown } from "@fortawesome/free-solid-svg-icons";
-import {TestApi} from "../../../common/index";
+import {TestApi} from "../../common/index";
 import {Comments, Posts, User} from "@common/index";
 import CommentItem from "../comment-item/CommentItem";
 import avatar from "../img/avatar.png";
 
-const PostItem = ({post}: {post: Posts}) => {
+const PostItem = ({ post }: { post: Posts }) => {
+  
+  
   const [user, setUser] = useState<User>();
   const [comments, setComment] = useState<Comments[]>([]);
   const [isShow, setIsShow] = useState<boolean>(false);
 
   useEffect(() => {
-    TestApi.GetPostAuthor(post.userId)
+    TestApi.GetAuthor(post.userId)
       .then((el) => {
         setUser(el);
       })

@@ -1,13 +1,13 @@
 import {Routes, Route} from "react-router-dom";
 import Footer from "./layout/components/Footer";
 import Header from "./layout/components/Header";
-import PostsList from "./components/pages/post-list/PostsList";
-import NotFoundPage from "./components/pages/NotFoundPage";
-import About from "./components/pages/About";
+import PostsList from "./pages/post-list/PostsList";
+import NotFoundPage from "./pages/NotFoundPage";
+import About from "./pages/About";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
-import AboutUser from "./components/pages/AboutUser";
+import AboutUser from "./pages/AboutUser";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path="/*" element={<NotFoundPage />} />
         <Route path="/postslist" element={<PostsList />} />
         <Route path="/about" element={<About />} />
-        <Route path="/about/" element={<AboutUser />} />
+        <Route path="/aboutuser" element={<AboutUser />} />
       </Routes>
       <Footer />
     </div>

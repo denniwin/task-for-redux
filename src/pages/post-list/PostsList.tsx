@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import {TestApi} from "../../../common/index";
+import {useEffect, useState} from "react";
+import {TestApi} from "../../common/index";
 import {Posts} from "@common/index";
 import PostItem from "../post-item/PostItem";
 import "./postslist.css";

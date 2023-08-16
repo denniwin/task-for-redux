@@ -8,8 +8,13 @@ export class TestApi {
         return item; 
     }
     
-    public static GetPostAuthor = async (id: number): Promise<User> => {
-        const item = await axios.get<User>(`https://jsonplaceholder.typicode.com/users/${id}`).then(el => el.data);
+    public static GetAuthor = async (id: number) => {
+        const item = await axios.get(`https://jsonplaceholder.typicode.com/users/${id}`).then(el => el.data);
+        return item; 
+    }
+
+    public static GetAuthorPosts = async (id: number): Promise<Posts[]> => {
+        const item = await axios.get<Posts[]>(`https://jsonplaceholder.typicode.com/users/${id}/posts`).then(el => el.data);
         return item; 
     }
     
